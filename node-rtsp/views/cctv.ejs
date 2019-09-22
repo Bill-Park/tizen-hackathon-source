@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Guardians</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+      body { margin: 0 auto; }
+   </style>
+</head>
+<body>
+   <canvas id="canvas"></canvas>
+</body>
+<script type="text/javascript" src="/js/jsmpeg.min.js"></script>
+<script type="text/javascript">
+   player = new JSMpeg.Player('ws://192.168.29.223:<%= port %>', {
+     canvas: document.getElementById('canvas') // Canvas should be a canvas DOM element
+   })   
+   canvas = document.getElementById('canvas');
+</script>
+</html>

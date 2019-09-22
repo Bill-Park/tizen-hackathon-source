@@ -1,0 +1,24 @@
+{
+  "name": "cctv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "admin-lte": "^2.4.18",
+    "easy-soap-request": "^2.6.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "moment-timezone": "^0.5.26",
+    "node-rtsp-stream": "0.0.8",
+    "request": "^2.88.0",
+    "ws": "^7.1.2"
+  }
+}

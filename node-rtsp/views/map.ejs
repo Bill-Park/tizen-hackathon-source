@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Path Finder</title>
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=e3gyq74q7q&submodules=geocoder"></script>
+    <script type="text/javascript" src="/js/functions.js" crossorigin="anonymous"></script>
+    <style>
+      html, body { height: 100%; margin: 0; padding: 0; }
+      #map   { height: 100%; width: 100%; }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqu4pdYpW0XziHY4q3Y3J2lw-e4yfDZPY&callback=initMap"></script>
+    <script type="text/javascript">
+
+    var latlng = new naver.maps.LatLng(37.482121, 126.885555);
+    var utmk = naver.maps.TransCoord.fromLatLngToUTMK(latlng); // 위/경도 -> UTMK
+    var tm128 = naver.maps.TransCoord.fromUTMKToTM128(utmk);   // UTMK -> TM128
+    var naverCoord = naver.maps.TransCoord.fromTM128ToNaver(tm128)
+    console.log(naverCoord);
+
+    var ws = new WebSocket('ws://localhost:8007');
+    ws.onmessage = (event) => {
+      console.log(event.data);
+      loadData();
+      /*
+      let recData = JSON.parse(event.data);
+      switch (recData.event) {
+      case 'res':
+        $('#chat').val($('#chat').val() + recData.data.comment + '\n');
+        break;
+      default:
+      }
+    */
+    }
+    </script>
+  </body>
+</html>

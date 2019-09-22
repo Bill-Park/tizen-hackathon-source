@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Guardians | Dashboard</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=e3gyq74q7q&submodules=geocoder"></script>
+  <script type="text/javascript" src="/js/functions.js" crossorigin="anonymous"></script>
+  <style>
+    html, body { height: 100%; margin: 0; padding: 0; }
+    #map   { height: 100%; width: 100%; }
+  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <a href="index2.html" class="logo">
+      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-lg"><b>Guardians</b></span>
+    </a>
+    <nav class="navbar navbar-static-top">
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+  <aside class="main-sidebar">
+    <section class="sidebar">
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="active treeview menu-open">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+          </ul>
+      </ul>
+    </section>
+  </aside>
+
+  <div class="content-wrapper">
+    <section class="content-header">
+      <h1>Dashboard</h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li><li class="active">Dashboard</li>
+      </ol>
+    </section>
+
+    <section class="content">
+
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="ion ion-ios-videocam-outline"></i></span>
+            <div class="info-box-content"><span class="info-box-text">카메라</span><span class="info-box-number">2</span></div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="info-box">
+            <span class="info-box-icon bg-red"><i class="ion ion-ios-lightbulb-outline"></i></span>
+            <div class="info-box-content"><span class="info-box-text">가로등</span><span class="info-box-number">2</span></div>
+          </div>
+        </div>
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="ion ion-ios-people-outline"></i></span>
+            <div class="info-box-content"><span class="info-box-text">사용자</span><span class="info-box-number">0</span></div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="ion ion-android-alert"></i></span>
+            <div class="info-box-content"><span class="info-box-text">위험</span><span class="info-box-number">0</span></div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title"><i class="ion ion-ios-videocam-outline"></i> &nbsp; Camera</h3>
+            </div>
+            <div class="box-body">
+              <iframe src="http://localhost:3000/cctv/4/" frameborder="0" width="100%"" height="400"></iframe>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title"><i class="icon ion-map"></i> &nbsp; Map</h3>
+            </div>
+            <div class="box-body">
+              <iframe src="http://localhost:3000/map" frameborder="0" width="100%"" height="400">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+  </div>
+
+  <footer class="main-footer">
+    <strong>Guardians of street.</strong> 
+  </footer>
+
+  <aside class="control-sidebar control-sidebar-dark">
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+        </ul>
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+        </ul>
+      </div>
+      <div class="tab-pane" id="control-sidebar-settings-tab"> 
+      </div>
+    </div>
+  </aside>
+  <div class="control-sidebar-bg"></div>
+</div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<script src="dist/js/adminlte.min.js"></script>
+<script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="bower_components/chart.js/Chart.js"></script>
+<script src="dist/js/pages/dashboard2.js"></script>
+<script src="dist/js/demo.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqu4pdYpW0XziHY4q3Y3J2lw-e4yfDZPY&callback=initMap"></script>
+<script type="text/javascript">
+var latlng = new naver.maps.LatLng(37.482121, 126.885555);
+var utmk = naver.maps.TransCoord.fromLatLngToUTMK(latlng); // 위/경도 -> UTMK
+var tm128 = naver.maps.TransCoord.fromUTMKToTM128(utmk);   // UTMK -> TM128
+var naverCoord = naver.maps.TransCoord.fromTM128ToNaver(tm128)
+console.log(naverCoord);
+
+var ws = new WebSocket('ws://192.168.29.223:8007');
+ws.onmessage = (event) => {
+  console.log(event.data);
+  loadData();
+  /*
+  let recData = JSON.parse(event.data);
+  switch (recData.event) {
+  case 'res':
+    $('#chat').val($('#chat').val() + recData.data.comment + '\n');
+    break;
+  default:
+  }
+*/
+}
+</script>          
+</body>
+</html>
